@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<title>Department</title>
+<body>
+<h1>{{department.name}}</h1>
+
+
+<a class="action" href="{{ url_for('addmembers', department_id=department.id) }}">Add Member</a>
+{% for member in department.department_member %}
+<ul>
+    <li>
+        {{ member.name}}  {{ member.position }}
+        <a class="action" href="{{ url_for('delete_member', id=member.id) }}">Delete Member</a>
+    </li>
+</ul>
+{% endfor %}
+<a class="action" href="{{ url_for('delete', id=department.id) }}">Delete Department</a> 
+</body>
+</html>
+
+

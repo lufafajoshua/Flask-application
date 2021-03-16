@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.css') }}">
+    <title>Title</title>
+</head>
+<body>
+    <script src="static/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/js/bootstrap.min.js">
+    <div class="container">
+        
+        <table class="table table-hover table-condensed table-bordered">
+            <tr>
+                <td>Total Membership:</td>
+                <td>{{ results.total_membership }}</td>
+            </tr>
+            <tr>
+                <td>females:</td>
+                <td>{{ results.female }}</td>
+            </tr>
+            <tr>
+                <td>males:</td>
+                <td>{{ results.male }}</td>
+            </tr>
+            <tr>
+                <td>singles:</td>
+                <td>{{ results.single }}</td>
+            </tr>
+            <tr>
+                <td>married:</td>
+                <td>{{ results.married }}</td>
+            </tr>
+        </table> 
+    </div>
+ 
+</body>
+</html>

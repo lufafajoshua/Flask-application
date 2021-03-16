@@ -1,0 +1,19 @@
+{% block content %}
+
+<img src="{{ image_file }}" alt="User Image">
+
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.photo }}
+    {% for error in form.photo.errors %}
+        <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+
+    {% if file_url %}
+    <br>
+    <img src="{{ file_url }}">
+    
+    {% endif %}
+    <p><input type="submit" name="btn" value="Upload"></p>
+</form>
+{% endblock %}
